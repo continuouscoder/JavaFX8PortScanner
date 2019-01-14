@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.69" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="412.0" minWidth="10.0" prefWidth="28.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="485.0" minWidth="10.0" prefWidth="384.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.0" minWidth="10.0" prefWidth="97.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="95.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="32.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="236.0" minHeight="10.0" prefHeight="231.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TextField fx:id="startingPortValue" text="50" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="6.0" right="6.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="6.0" right="6.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="hostValue"  onAction="#startScan" text="127.0.0.1" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="6.0" right="6.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="endingPortValue" text="550" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="6.0" right="6.0" />
+         </GridPane.margin>
+      </TextField>
+      <Label text="Host" textFill="#0bd9ef" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <padding>
+            <Insets left="6.0" right="6.0" />
+         </padding>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label text="Starting Port" textFill="#0cdaed" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets left="6.0" />
+         </GridPane.margin>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Label text="Ending Port" textFill="#0bd9ef" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets left="6.0" />
+         </GridPane.margin>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <TextArea fx:id="scanResultsValues" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000; -fx-text-fill: #000000;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <GridPane.margin>
+            <Insets left="6.0" top="20.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextArea>
+      <Label text="Open Ports" textFill="#0bd9ef" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP">
+         <padding>
+            <Insets left="6.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+      <Button fx:id="submit" mnemonicParsing="false" onAction="#startScan" opacity="0.76" style="-fx-background-color: #ff3c3c;" text="Start Scan" textFill="#fcf9f9" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+      <Label text="Java FX Port Scanner" textFill="#ff3c3c" GridPane.columnIndex="1">
+         <font>
+            <Font size="23.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </Label>
+   </children>
+</GridPane>

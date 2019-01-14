@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="Java8FXPortScanner">
+    <output-path>$PROJECT_DIR$/out/artifacts/Java8FXPortScanner</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="Java8 PortScanner" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Java8FXPortScanner.jar">
+        <element id="module-output" name="Java8FXPortScanner" />
+      </element>
+    </root>
+  </artifact>
+</component>
