@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Java8FXPortScanner" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d5bf247-2973-4bf3-be0a-13fd106d9f1a" name="Default Changelist" comment="" />
+    <list default="true" id="6d5bf247-2973-4bf3-be0a-13fd106d9f1a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +44,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+            <state>
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1888#1889#0" expanded="true" />
+                <element signature="e#2008#2009#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,6 +68,9 @@
       <find>fx:</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -66,11 +81,12 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1529" />
-    <option name="y" value="222" />
+    <option name="x" value="1496" />
+    <option name="y" value="36" />
     <option name="width" value="1167" />
     <option name="height" value="808" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -123,7 +139,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547500317852" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547504054585" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="options.lastSelected" value="configurable.group.appearance" />
@@ -226,15 +242,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547497389437</updated>
-      <workItem from="1547497393878" duration="2414000" />
+      <workItem from="1547497393878" duration="5724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2414000" />
+    <option name="totallyTimeSpent" value="5724000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1529" y="222" width="1167" height="808" extended-state="0" />
+    <frame x="1496" y="36" width="1167" height="808" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -291,8 +308,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+        <state>
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1888#1889#0" expanded="true" />
+            <element signature="e#2008#2009#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

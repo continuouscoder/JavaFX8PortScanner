@@ -3,7 +3,6 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-
 import java.io.DataOutputStream;
 import java.net.Socket;
 
@@ -25,11 +24,13 @@ public class Controller {
         System.out.println(endingPortValue.getText());
         System.out.println("Scanning host: " + hostValue.getText() + " starting at port: " + startingPortValue.getText() + " and ending at port: " + endingPortValue.getText());
 
-        Platform.runLater(new Runnable() {
+        new Thread(new Runnable() {
             @Override
             public void run() {
                 scanResultsValues.clear();
+
                 for (int i = Integer.parseInt(startingPortValue.getText()); i <= Integer.parseInt(endingPortValue.getText()); i++) {
+                    final String port = Integer.toString(i);
                     try {
                         Socket socket = new Socket(hostValue.getText(), i);
                         DataOutputStream dout = new DataOutputStream(socket.getOutputStream());
@@ -38,40 +39,19 @@ public class Controller {
                         dout.close();
                         socket.close();
                         System.out.println("Port " + i + " is open...");
-                        scanResultsValues.appendText("Port open: " + Integer.toString(i )+"\n");
+
+                        Platform.runLater(new Runnable() {
+                            @Override
+                            public void run() {
+                                scanResultsValues.appendText("Port open: " + port +"\n");
+                            }
+                        });
                     } catch (Exception err) {
 
                     }
                 }
                 scanResultsValues.appendText("\n## Scan Completed ##");
             }
-        });
-//        Runnable task = new Runnable() {  // Concurrency solution provided by: https://examples.javacodegeeks.com/desktop-java/javafx/javafx-concurrency-example/
-//            @Override
-//            public void run() {  // Part of the Runnable:
-//                // My scanner code gets dropped in the run method of the runnable...
-//                scanResultsValues.clear();
-//                for (int i = Integer.parseInt(startingPortValue.getText()); i <= Integer.parseInt(endingPortValue.getText()); i++) {
-//                    try {
-//                        Socket socket = new Socket(hostValue.getText(), i);
-//                        DataOutputStream dout = new DataOutputStream(socket.getOutputStream());
-//                        dout.writeUTF("\n\n\n");
-//                        dout.flush();
-//                        dout.close();
-//                        socket.close();
-//                        System.out.println("Port " + i + " is open...");
-//                        scanResultsValues.appendText("Port open: " + Integer.toString(i )+"\n");
-//                    } catch (Exception err) {
-//
-//                    }
-//                }
-//                scanResultsValues.appendText("\n## Scan Completed ##");
-//            }
-//        };
-//
-//        Thread backgroundThread = new Thread(task); // Concurrency solution: defining a new background thread
-//        backgroundThread.setDaemon(true);           // Concurrency solution: thread will use a daemon
-//        backgroundThread.start();                   // Concurrency solution: starting thread
+        }).start();
     }
-
 }
